@@ -14,7 +14,6 @@ export class Board extends React.Component{
   }
 
   handleReset(){
-    console.log('reseting');
     let newGrid = Array(19).fill(0).map(x => Array(19).fill("+"));
     this.setState({'grid':newGrid});
   }
@@ -69,18 +68,14 @@ export class Board extends React.Component{
              width:"auto",
              border:"1px solid black",
              tableLayout:'fixed',
-
            };
     const g = this.state.grid
     const emptyGrid = g.map((row, i) => {return (
       <tr key={"row_"+i}>
         {row.map((col, j) => {
           const color_ = g[i][j] === '+' ? '#e4e4a1': g[i][j] === 'w' ? 'white':'black';
-
-                             //this.state.isWhite === true ? 'white' : 'black';
           return (
           <td style={{
-
                   overflow:'hidden',
                   width:100,
                   height:20,
@@ -88,7 +83,6 @@ export class Board extends React.Component{
                   color:'red',
                   boarderColor: 'black',
                   border:".5px solid black"
-
                 }}
               key={"row_"+i+"_col_"+j}
               onClick={()=>{this.handleClick(i,j)}}
@@ -103,7 +97,7 @@ export class Board extends React.Component{
 
     return (
       <div style={{ textAlign:'center'}}>
-      <h2>五子棋</h2>
+      <h2><a href="https://en.wikipedia.org/wiki/Gomoku" style={{textDecoration:"none"}}>五子棋</a></h2>
       <div style={{margin: 'auto', width:"40%"}}>
       <table cellSpacing="0" style={style}>
         <tbody>

@@ -5,7 +5,7 @@ import { Board } from './components/Board'
 class App extends Component {
   render() {
     return (
-      <Board dims={[5, 6]}/>
+      <Board />
     );
   }
 }
