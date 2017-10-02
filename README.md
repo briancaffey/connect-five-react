@@ -1,4 +1,4 @@
-#Gomoku // Connect 5
+# Gomoku // Connect 5 // 五子棋
 
 ## Objective
 
